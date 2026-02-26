@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+            <!-- Шапка сайта -->
+            <header class="header">
+                <div class="logo">
+                    <img src="./img/logo2.png" alt="Логотип">
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="./index.html">Главная страница</a>
+                    <a href="./profile.html">Личный кабинет</a>
+                    <a href="./catalog.html">Каталог мероприятий</a>
+                    <a href="./admin.html">Добавить мероприятие</a>
+                </nav>
+                <div class="burger" onclick="toggleBurger()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </header>
+    <!--Контейнер входа в аккаунт-->
+    <div class="container">
+        <div class="login-frame">
+            <h2>Вход в аккаунт</h2>
+            
+            <form action="" method="POST">
+            <!--Строка Email-->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ivan@yandex.ru"
+                required
+            >
+        </div>
+<!--Строка пароль-->
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Введите пароль"
+                required
+            >
+        </div>
+<!--Кнопка войти-->
+        <button type="submit" class="btn-login">Войти</button>
+    </form>
+<!--Кнопка для восстановления пароля-->
+    <div class="links">
+        <a href="" class="link-forgot">Забыли пароль?</a>
+    </div>
+<!--Кнопка входа через Госуслуги-->
+    <button class="btn-gosuslugi">
+        Войти через Госуслуги
+    </button>
+<!--Кнопка для регистрации-->
+<div class="links">
+        <a href="./register.html" class="link-forgot">Регистрация</a>
+    </div>
+</div>
+</div>
+<!--Подключение JS-->
+ <script>
+            function toggleBurger() {
+                document.getElementById('nav').classList.toggle('active');
+            }
+        </script>
+</body>
+</html>
